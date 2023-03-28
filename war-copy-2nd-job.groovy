@@ -14,12 +14,14 @@ pipeline {
     stages {
         stage ('copying-wars-to-dev'){
             steps {
+                sh "sudo rm -rf *"
                 sh "scp -r gameoflife.war devops@${devIp}:/mnt/wars"
             }
         }
 
         stage ('copying-wars-to-qa'){
             steps {
+                sh "sudo rm -rf *"
                 sh "scp -r gameoflife.war devops@${qaIp}:/mnt/wars"
             }
         }
