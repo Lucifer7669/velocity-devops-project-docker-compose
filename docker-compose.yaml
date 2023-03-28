@@ -1,8 +1,8 @@
 version: '2'
 services:
- tomacat-service:
-   images: 'tomcat:9'
-   ports:
-     - "8080:8080"
-   volumes:
-     - "/mnt/wars:/usr/local/tomcat/webapps"
+  tomcat-service:
+    image: 'tomcat:9'
+    ports:
+      - "8080:8080"
+    volumes:
+      - "/mnt/wars:/usr/local/tomcat/webapps"
